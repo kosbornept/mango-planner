@@ -1,13 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, View } from 'react-native';
 import { Link } from 'expo-router';
+import * as Animatable from 'react-native-animatable';
+
+import { images } from '../constants'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-3xl font-psugar">Mango!</Text>
-      <StatusBar style="auto" />
-      <Link href="/home" style={{ color: "blue" }}>Go to Home</Link>
-    </View>
+    <SafeAreaView className="bg-mango-200 h-full">
+      <ScrollView contentContainerStyle={{ height: '100%' }}>
+        <View className="w-full justify-center items-center h-full px-4">
+          <Image 
+            source={images.mango}
+          />
+          <Animatable.View animation="pulse" easing="ease-out" iterationCount="infinite">
+            <Link 
+              href="/pomo" 
+              className='text-green font-psugar text-4xl'
+            >
+              Tap to load
+            </Link>
+          </Animatable.View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }

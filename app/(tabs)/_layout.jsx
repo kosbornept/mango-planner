@@ -1,11 +1,12 @@
 import { Image, Text, View } from 'react-native'
-import { Tabs, Redirect } from 'expo-router'
+import { StatusBar } from 'expo-status-bar';
+import { Tabs } from 'expo-router'
 
 import { icons } from "../../constants";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="items-center justify-center gap-2">
+    <View className="flex items-center justify-center gap-2">
       <Image 
         source={icon}
         resizeMode='contain'
@@ -30,28 +31,13 @@ const TabsLayout = () => {
           tabBarActiveTintColor: '#00bf63',
           tabBarInactiveTintColor: '#7C807C',
           tabBarStyle: {
-            backgroundColor: '#fabc5c',
+            backgroundColor: '#ffbd59',
+            height: 84,
             borderTopWidth: 2,
-            borderTopColor: '#00bf63',
-            height: 84
+            borderTopColor: "#00bf63"
           }
         }}
       >
-        <Tabs.Screen 
-          name='home'
-          options={{
-            title: "Home",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon 
-                icon={icons.home}
-                color={color}
-                name="Home"
-                focused={focused}
-              />
-            )
-          }}
-        />
         <Tabs.Screen 
           name='pomo'
           options={{
@@ -64,7 +50,7 @@ const TabsLayout = () => {
                 name="Pomo"
                 focused={focused}
               />
-            )
+            ),
           }}
         />
         <Tabs.Screen 
@@ -79,10 +65,11 @@ const TabsLayout = () => {
                 name="Todo"
                 focused={focused}
               />
-            )
+            ),
           }}
         />
       </Tabs>
+      <StatusBar backgroundColor="#ffbd59" style="light" />
     </>
   )
 }
