@@ -3,9 +3,9 @@
     "name": "Mango",
     "scheme": "mango",
     "slug": "mango",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icons/mango-icon.png",
+    "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/images/Mango.png",
@@ -17,15 +17,24 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icons/mango-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/icons/adaptive-icon.png",
+        "backgroundColor": "#95E0A1"
+      },
+      "package": "com.kevinosborne.mango"
     },
     "web": {
       "favicon": "./assets/icons/mango-icon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "430de68c-696d-47d2-89fd-8fd120567c0a"
+      }
+    }
   }
 }

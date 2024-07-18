@@ -1,4 +1,4 @@
-import { Text, ScrollView, View, TouchableOpacity, Image } from 'react-native'
+import { Text, ScrollView, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Todo = () => {
