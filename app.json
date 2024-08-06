@@ -3,7 +3,7 @@
     "name": "Mango",
     "scheme": "mango",
     "slug": "mango",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/icons/icon.png",
     "userInterfaceStyle": "light",
